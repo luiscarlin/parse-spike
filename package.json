@@ -1,0 +1,11 @@
+{
+  "name": "parse-spike",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:luiscarlin/parse-spike.git",
+  "author": "Luis Carlin <luiscarlin@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "node-xlsx": "^0.15.0"
+  }
+}
