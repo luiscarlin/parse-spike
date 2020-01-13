@@ -34592,7 +34592,7 @@ var Dropzone = function Dropzone(props) {
 
 var _default = Dropzone;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-dropzone":"node_modules/react-dropzone/dist/es/index.js","./dropzone.css":"src/dropzone.css"}],"src/App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dropzone":"node_modules/react-dropzone/dist/es/index.js","./dropzone.css":"src/dropzone.css"}],"src/AverageReport.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34600,19 +34600,45 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var AverageReport = function AverageReport() {
+  return _react.default.createElement("div", null, "Average: ");
+};
+
+var _default = AverageReport;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"src/App.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
 
 var _Dropzone = _interopRequireDefault(require("./Dropzone"));
 
+var _AverageReport = _interopRequireDefault(require("./AverageReport"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var App = function App() {
-  return _react.default.createElement("main", null, _react.default.createElement("h1", null, "Super Duper Report Generator"), _react.default.createElement("h2", null, "1. Upload your files..."), _react.default.createElement(_Dropzone.default, null), _react.default.createElement("h2", null, "2. Generate your report..."), _react.default.createElement("button", null, "Average Report"), _react.default.createElement("button", null, "Colbert Report"), _react.default.createElement("button", null, "TPS Report"));
+  return _react.default.createElement("main", null, _react.default.createElement("h1", null, "Super Duper Report Generator"), _react.default.createElement("h2", null, "1. Upload your files..."), _react.default.createElement(_Dropzone.default, null), _react.default.createElement("h2", null, "2. Generate your report..."), _react.default.createElement("button", null, "Average Report"), _react.default.createElement("button", null, "Colbert Report"), _react.default.createElement("button", null, "TPS Report"), _react.default.createElement("h2", null, "3. View your report..."));
 };
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./Dropzone":"src/Dropzone.js"}],"src/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./Dropzone":"src/Dropzone.js","./AverageReport":"src/AverageReport.js"}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -34652,7 +34678,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56431" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58441" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
