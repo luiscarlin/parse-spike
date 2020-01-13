@@ -6,6 +6,7 @@
   "author": "Luis Carlin <luiscarlin@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "node-xlsx": "^0.15.0"
+    "node-xlsx": "^0.15.0",
+    "xlsx": "^0.15.4"
   }
 }

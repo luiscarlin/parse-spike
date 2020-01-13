@@ -15,7 +15,7 @@ buffer-from@^1.1.0:
   resolved "https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.1.1.tgz#32713bc028f75c02fdb710d7c7bcec1f2c6070ef"
   integrity sha512-MQcXEUbCKtEo7bhqEs6560Hyd4XaovZlO/k9V3hjVUF/zwW7KBVdSK4gIt/bzwS9MbR5qob+F5jusZsb0YQK2A==
 
-cfb@^1.1.2:
+cfb@^1.1.2, cfb@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/cfb/-/cfb-1.1.3.tgz#05de6816259c8e8bc32713aba905608ee385df66"
   integrity sha512-joXBW0nMuwV9no7UTMiyVJnQL6XIU3ThXVjFUDHgl9MpILPOomyfaGqC290VELZ48bbQKZXnQ81UT5HouTxHsw==
@@ -93,6 +93,19 @@ xlsx@^0.14.1:
   dependencies:
     adler-32 "~1.2.0"
     cfb "^1.1.2"
+    codepage "~1.14.0"
+    commander "~2.17.1"
+    crc-32 "~1.2.0"
+    exit-on-epipe "~1.0.1"
+    ssf "~0.10.2"
+
+xlsx@^0.15.4:
+  version "0.15.4"
+  resolved "https://registry.yarnpkg.com/xlsx/-/xlsx-0.15.4.tgz#42ef1807829c4f9e98e8fce2641d53df5b5bde3e"
+  integrity sha512-5NKT5f4uRlQO6R9dEzWH5rxXNeT5iDB3I/80EFsAaYejxgP7a09l2KVtPap0pZRUrt1F8MVy8CRsEOJ5tbjheg==
+  dependencies:
+    adler-32 "~1.2.0"
+    cfb "^1.1.3"
     codepage "~1.14.0"
     commander "~2.17.1"
     crc-32 "~1.2.0"
