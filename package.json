@@ -10,7 +10,7 @@
     "start": "parcel index.html --port 3000 --open",
     "build": "parcel build index.html",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "gh-pages": "^2.2.0",
