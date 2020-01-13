@@ -41,4 +41,4 @@ module.exports=function(e){function r(n){if(t[n])return t[n].exports;var o=t[n]=
 },{"react":"HdMw","./Dropzone":"vrw4"}],"H99C":[function(require,module,exports) {
 "use strict";var e=u(require("react")),r=u(require("react-dom")),t=u(require("./App"));function u(e){return e&&e.__esModule?e:{default:e}}r.default.render(e.default.createElement(t.default,null),document.getElementById("app"));
 },{"react":"HdMw","react-dom":"X9zx","./App":"FLHj"}]},{},["H99C"], null)
-//# sourceMappingURL=/src.224f52bb.js.map
+//# sourceMappingURL=parse-spike/src.224f52bb.js.map
