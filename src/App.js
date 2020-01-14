@@ -1,10 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import AverageReport from "./AverageReport";
 import Dashboard from "./Dashboard";
 
 const App = () => (
-  <Router>
+  <HashRouter basename="/parse-spike">
     <Switch>
       <Route path="/average">
         <AverageReport />
@@ -13,7 +13,7 @@ const App = () => (
         <Dashboard />
       </Route>
     </Switch>
-  </Router>
+  </HashRouter>
 );
 
 export default App;
