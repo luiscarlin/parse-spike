@@ -6,7 +6,7 @@ workSheetsFromFile[0].data.forEach((row, rowIndex) => {
   row.forEach((item, itemIndex) => console.log(`${itemIndex} ${item}`));
 });
 
-// create a csv file from excel
-const xlsx = require("xlsx");
-const workBook = xlsx.readFile(`${__dirname}/test.xlsx`);
-xlsx.writeFile(workBook, "converted.csv", { bookType: "csv" });
+// // create a csv file from excel
+// const xlsx = require("xlsx");
+// const workBook = xlsx.readFile(`${__dirname}/test.xlsx`);
+// xlsx.writeFile(workBook, "converted.csv", { bookType: "csv" });
