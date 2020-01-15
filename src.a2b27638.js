@@ -35703,50 +35703,7 @@ if ("development" !== "production") {
     style: _propTypes.default.object
   });
 }
-},{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"src/AppState.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.AppState = exports.AppContext = void 0;
-
-var _react = _interopRequireWildcard(require("react"));
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-var AppContext = _react.default.createContext();
-
-exports.AppContext = AppContext;
-
-var AppState = function AppState(_ref) {
-  var children = _ref.children;
-
-  var _useState = (0, _react.useState)([]),
-      _useState2 = _slicedToArray(_useState, 2),
-      chargeabilityForecast = _useState2[0],
-      setChargeabilityForecast = _useState2[1];
-
-  return _react.default.createElement(AppContext.Provider, {
-    value: {
-      chargeabilityForecast: chargeabilityForecast,
-      setChargeabilityForecast: setChargeabilityForecast
-    }
-  }, children);
-};
-
-exports.AppState = AppState;
-},{"react":"node_modules/react/index.js"}],"src/AverageReport.js":[function(require,module,exports) {
+},{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"src/AverageReport.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35754,36 +35711,17 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
-var _AppState = require("./AppState");
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var AverageReport = function AverageReport() {
-  var _useContext = (0, _react.useContext)(_AppState.AppContext),
-      chargeabilityForecast = _useContext.chargeabilityForecast,
-      setChargeabilityForecast = _useContext.setChargeabilityForecast;
-
-  if (chargeabilityForecast.length == 0) {
-    return _react.default.createElement("div", null, "No data");
-  }
-
-  var allNumOnes = chargeabilityForecast.map(function (row) {
-    return row.num1;
-  });
-  var sum = allNumOnes.reduce(function (previous, current) {
-    return previous + current;
-  });
-  var avg = sum / allNumOnes.length;
-  return _react.default.createElement("section", null, _react.default.createElement("h1", null, "Average Report"), _react.default.createElement("h2", null, "Average: ", avg));
+  return _react.default.createElement("h1", null, "Average Report");
 };
 
 var _default = AverageReport;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./AppState":"src/AppState.js"}],"node_modules/tslib/tslib.es6.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"node_modules/tslib/tslib.es6.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -88829,8 +88767,6 @@ var _xlsx = _interopRequireDefault(require("xlsx"));
 
 require("./dropzone.css");
 
-var _AppState = require("./AppState");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -88838,10 +88774,6 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var Dropzone = function Dropzone() {
-  var _useContext = (0, _react.useContext)(_AppState.AppContext),
-      chargeabilityForecast = _useContext.chargeabilityForecast,
-      setChargeabilityForecast = _useContext.setChargeabilityForecast;
-
   var onDrop = (0, _react.useCallback)(function (acceptedFiles) {
     acceptedFiles.forEach(function (file) {
       var reader = new FileReader();
@@ -88864,7 +88796,14 @@ var Dropzone = function Dropzone() {
         workbook.SheetNames.forEach(function (sheetName) {
           var allRows = _xlsx.default.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
 
-          setChargeabilityForecast(allRows);
+          var allNumOnes = allRows.map(function (row) {
+            return row.num1;
+          });
+          var sum = allNumOnes.reduce(function (previous, current) {
+            return previous + current;
+          });
+          var avg = sum / allNumOnes.length;
+          console.log(avg);
         });
       };
 
@@ -88885,7 +88824,7 @@ var Dropzone = function Dropzone() {
 
 var _default = Dropzone;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-dropzone":"node_modules/react-dropzone/dist/es/index.js","xlsx":"node_modules/xlsx/xlsx.js","./dropzone.css":"src/dropzone.css","./AppState":"src/AppState.js"}],"src/Dashboard.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dropzone":"node_modules/react-dropzone/dist/es/index.js","xlsx":"node_modules/xlsx/xlsx.js","./dropzone.css":"src/dropzone.css"}],"src/Dashboard.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -88903,7 +88842,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Dashboard = function Dashboard() {
   return _react.default.createElement("main", null, _react.default.createElement("h1", null, "Super Duper Report Generator"), _react.default.createElement("h2", null, "1. Upload Excel files"), _react.default.createElement(_Dropzone.default, null), _react.default.createElement("h2", null, "2. Generate a report"), _react.default.createElement(_reactRouterDom.Link, {
-    to: "/average"
+    to: "/average",
+    target: "_blank"
   }, _react.default.createElement("button", null, "Average Report")), _react.default.createElement("button", null, "Colbert Report"), _react.default.createElement("button", null, "TPS Report"));
 };
 
@@ -88925,23 +88865,21 @@ var _AverageReport = _interopRequireDefault(require("./AverageReport"));
 
 var _Dashboard = _interopRequireDefault(require("./Dashboard"));
 
-var _AppState = require("./AppState");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var App = function App() {
-  return _react.default.createElement(_AppState.AppState, null, _react.default.createElement(_reactRouterDom.HashRouter, {
+  return _react.default.createElement(_reactRouterDom.BrowserRouter, {
     basename: "/parse-spike"
   }, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
     path: "/average"
   }, _react.default.createElement(_AverageReport.default, null)), _react.default.createElement(_reactRouterDom.Route, {
     path: "/"
-  }, _react.default.createElement(_Dashboard.default, null)))));
+  }, _react.default.createElement(_Dashboard.default, null))));
 };
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./AverageReport":"src/AverageReport.js","./Dashboard":"src/Dashboard.js","./AppState":"src/AppState.js"}],"src/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./AverageReport":"src/AverageReport.js","./Dashboard":"src/Dashboard.js"}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -88981,7 +88919,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64899" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57846" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
