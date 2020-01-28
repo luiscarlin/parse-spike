@@ -17,15 +17,36 @@ const Dropzone = () => {
         });
 
         workbook.SheetNames.forEach(sheetName => {
-          const allRows = XLSX.utils.sheet_to_row_object_array(
-            workbook.Sheets[sheetName]
+          let rows = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName], {
+            header: 1,
+            raw: false
+          });
+
+          let cols = rows[1]
+            .map((x, index) => (x === "Total Chargeable %" ? index : undefined))
+            .filter(Boolean)
+            .map(y => ({ period: rows[0][y], colNum: y }));
+
+          console.log(cols);
+
+          rows = rows.filter(
+            row =>
+              !row.includes("Total") &&
+              row.includes("OVR") &&
+              row.includes("Service Delivery")
           );
-          const allNumOnes = allRows.map(row => row.num1);
-          const sum = allNumOnes.reduce(
-            (previous, current) => previous + current
-          );
-          const avg = sum / allNumOnes.length;
-          console.log(avg);
+
+          console.log(rows);
+
+          const people = rows.map(x => {
+            let person = { name: x[3] };
+            cols.forEach(
+              y => (person = { ...person, [y.period]: x[y.colNum] })
+            );
+            return person;
+          });
+
+          console.log(people);
         });
       };
       reader.readAsBinaryString(file);
